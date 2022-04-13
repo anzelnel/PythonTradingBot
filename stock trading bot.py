@@ -60,7 +60,7 @@ while (True):
     wait_for_market_open() #check if market is open
     
     #get historical prices
-    stock_df = api.get_barset(s, '15Min', limit=10).df
+    stock_df = api.get_bars(s, '15Min', limit=10).df
     stock_df.columns = stock_df.columns.droplevel(0)
 
     #calculate moving average
